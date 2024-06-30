@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/8b4042ccf0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/cad.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js" integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <title>Finalizar compra</title>
+    <script></script>
+</head>
+
+<body>
+    <div class="loader-content">
+        <div class="loader-circle"></div>
+        <!-- <span class="loader-text">enviando...</span> -->
+      </div>
+      <header class="header"></header>
+    <main class="home">
+        <div class="home-area">
+            <section class="left-home" style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin-right: 20px;">               
+                <h4 style="margin-bottom: 1px;">Informe os dados abaixo</h4>
+                <form id="formCad" style="align-items: center;">
+                    <input type="text" id="user" name="user" placeholder="Nome de usuário" style="width: 300px;">
+                    <input type="password" id="pass" name="pass" placeholder="Senha" style="width: 300px;">
+                    <input type="text" id="nome" name="nome" placeholder="Nome" style="width: 300px;">
+                    <input type="text" id="cpf" name="cpf" placeholder="CPF" style="width: 300px;">
+                    <input type="email" id="email" name="email" placeholder="seuemail@mail.com" style="width: 300px;">
+                    <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-00" style="width: 300px;">
+                    <input type="text" id="end" name="end" placeholder="Endereço" style="width: 300px;">
+                    <select class="pagamento" name="pagamento" id="pagamento" required="required" style="width: 300px; height: 35px; border: 1px solid gainsboro; border-radius: 8px; margin-top: 8px;">
+                        <option>Forma de pagamento</option>
+                        <option value="dinheiro">Dinheiro</option>
+                        <option value="cartao credito">Cartão crédito</option>
+                        <option value="cartao debito">Cartão débito</option>
+                        <option value="pix">Pix</option>
+                    </select>
+                    <div class="confirma">
+                        <button type="submit" onclick="salvar_Comp(event)">Finalizar compra</button>
+                        <button type="button" onclick="cancelar_Comp()">Voltar ao início</button>
+                        <button type="button" onclick="window.location.href='login.html'">Acessar Perfil</button>
+                    </div>      
+                </form>   
+            </section>
+            <section class="right-home">
+                <div class="right-image">
+                    <img src="images/pizza-desenho.png" alt="pizza.png">
+                </div>
+            </section>
+        </div>    
+    </main>
+    <dialog id="modal">
+        <div class="cont_modal">
+            <!-- Conteúdo do modal -->         
+            <div class="pedido-finalizado">
+                <i class="fa-solid fa-circle-check success-img"></i>
+                <h1>Seu pedido foi finalizado!</h1>                   
+            </div>           
+        
+            <div class="overlay" id="overlay" onclick="closeModal()">
+            </div>
+        </div>
+    </dialog>
+    <footer style="display: contents;">
+        <a href="https://www.linkedin.com/in/matheus-cruz-533610215/" target="_blank">© Developed by Matheus Cruz</a>
+    </footer>
+    <script src="js/nav.js"></script>  
+    <script src="js/back.js"></script>  
+</body>
+
+</html>

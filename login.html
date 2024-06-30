@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/8b4042ccf0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/cad.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js" integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <title>Login</title>
+</head>
+<body>
+    <div class="loader-content">
+        <div class="loader-circle"></div>
+    </div>
+    <header class="header"></header>
+    <main class="home">
+        <div class="home-area">
+            <section class="left-home" style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin-right: 20px;">               
+                <h4>Informe os dados abaixo</h4>
+                <form action="dados.php" method="post" id="formLogin" name="formLogin">
+                    <input type="text" id="user" name="user" placeholder="Nome de usuário"  style="width: 300px;">
+                    <input type="password" id="pass" name="pass" placeholder="Senha"  style="width: 300px;">
+                    <div class="confirma">
+                        <button type="submit" value="entrar" onclick="login(event)">Entrar</button>
+                        <button type="button" onclick="window.location.href='cad.html'">Voltar ao início</button>
+                    </div>     
+                </form>                  
+            </section>
+            <section class="right-home">
+                <div class="right-image">
+                    <img src="images/pizza-desenho.png" alt="pizza.png">
+                </div>
+            </section>
+        </div>    
+    </main>
+    <footer>
+        <a href="https://www.linkedin.com/in/matheus-cruz-533610215/" target="_blank">© Developed by Matheus Cruz</a>
+    </footer>
+    <script src="js/nav.js"></script>  
+    <script src="js/perfil.js"></script>
+</body>
+</html>

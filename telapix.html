@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/8b4042ccf0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/cad.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js" integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <title>Pagamento pix</title>
+    <script></script>
+</head>
+
+<body>
+    <div class="loader-content">
+        <div class="loader-circle"></div>
+        <!-- <span class="loader-text">enviando...</span> -->
+      </div>
+      <header class="header"></header>
+    <main class="home">
+        <div class="home-area">
+            <section class="left-home">               
+                <form id="formCad">
+                   <img src="./images/qrcodepizza.png" style="height: 300px; width: 300px;">
+                <div class="confirma">
+                    <button type="submit" onclick="registraped(event)">Finalizar compra</button>
+                    <button type="button" onclick="window.location.href='cad.html'">Formas de pagamento</button>
+                </div>
+                </form>                
+            </section>
+            <section class="right-home">
+                <div class="right-image">
+                    <img src="images/pizza-desenho.png" alt="pizza.png">
+                </div>
+            </section>
+        </div>    
+    </main>
+    <dialog id="modal">
+        <div class="cont_modal">
+            <!-- Conteúdo do modal -->         
+            <div class="pedido-finalizado">
+                <i class="fa-solid fa-circle-check success-img"></i>
+                <h1>Pagamento realizado com sucesso!</h1>                   
+            </div>           
+        
+            <div class="overlay" id="overlay" onclick="closeModal()">
+            </div>
+        </div>
+    </dialog>
+    <footer style="display: contents;">
+        <a href="https://www.linkedin.com/in/matheus-cruz-533610215/" target="_blank">© Developed by Matheus Cruz</a>
+    </footer>
+    <script src="js/nav.js"></script>   
+    <script src="js/qrcode.js"></script>
+</body>
+
+</html>
